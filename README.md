@@ -1,4 +1,4 @@
-# Orari Bus GTT
+# GTT Realtime Arrivals
 This project is a simple HTML + CSS + JavaScript frontend that allows users to view bus schedules for the public transportation system in Turin.
 
 ## How to use the app
