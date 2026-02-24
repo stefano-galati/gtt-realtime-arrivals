@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="./images/appIcon.jpg">
+        <title>Orari Bus</title>
+        <script src="https://kit.fontawesome.com/fc01b206d0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main>
+            <button id="modify_groups_button"><i class="fa-solid fa-pen"></i></button>
+            <div class="hidden" id="modify_groups_container">
+                <h2>Modifica gruppi</h2>
+                <div id="groups_stops_modified">
+                    <div id="groups_modified_container" class="modified_container">
+                        <p>Gruppi</p>
+                        <div id="groups_modified">
+
+                        </div>
+                    </div>
+                    <div id="stops_modified_container" class="modified_container">
+                        <p>Fermate</p>
+                        <div id="stops_modified">
+
+                        </div>
+                    </div>
+                    <div id="buses_modified_container" class="modified_container">
+                        <p>Linee</p>
+                        <div id="buses_modified">
+
+                        </div>
+                    </div>
+                </div>
+                <button id="local_save_button"><i class="fa-solid fa-save"></i></button>
+            </div>
+
+            <h2>Gruppi</h2>
+            <div id="groups">
+                
+            </div>
+            <h2>Fermate</h2>
+            <div id="bus_stops">
+
+            </div>
+            <div>
+                <h2>Prossime partenze</h2>
+                <div id="next_departures">
+
+                </div>
+            </div>
+        </main>
+
+        <script src="script.js" type="module" defer></script>
+    </body>
+</html>

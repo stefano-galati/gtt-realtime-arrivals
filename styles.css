@@ -1,0 +1,201 @@
+/* {
+    border: 1px solid red;
+} */
+
+
+html, body {
+    overflow-x: hidden;
+    background-color: darkblue;
+}
+
+html {
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+}
+
+#groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+#bus_stops {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+#next_departures {
+}
+
+.group {
+    border: 2px solid black;
+    background-color: lightblue;
+    color: black;
+    padding: 0px 10px;
+    width: fit-content;
+}
+
+.stop {
+    border: 2px solid black;
+    background-color: lightblue;
+    color: black;
+    padding: 0px 10px;
+    width: fit-content;
+}
+
+.selected_group {
+    background-color: yellow;
+}
+
+.selected_stop {
+    background-color: yellow;
+}
+
+.departure {
+    color: black;
+    height: 100px;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    border: 5px solid black;
+    background: linear-gradient(0, rgb(58, 58, 196), yellow);
+}
+
+.departure_internal_div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stop_name{
+    margin: 0;
+    font-size: 1em;
+}
+
+.line_number {
+    margin: 0;
+    font-size: 2em;
+}
+
+.remaining_time {
+    font-size: 1.8em;
+    height: fit-content;
+}
+
+.departure_time {
+    font-size: 1em;
+    height: fit-content;
+}
+
+.realtime > .departure_time {
+    font-weight: bold;
+}
+
+.realtime > .remaining_time {
+    font-weight: bold;
+}
+
+#loading_image {
+    width: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+#groups_stops_modified {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+#groups_stops_modified > div {
+    border: 2px solid black;
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+    width: 25vw;
+}
+
+.modified_group {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.add_button {
+    margin-top: 10px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+#modify_groups_button {
+    background-color: lightblue;
+}
+#local_save_button {
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
+.modified_container > p {
+    margin-top: 0;
+}
+
+
+
+@keyframes spinAndWiggle {
+  0% {
+    transform: rotate(0deg); 
+  }
+  25% {
+    transform: rotate(90deg) translate(100px, 100px);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg) translate(-100px, 100px);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wiggly-spin {
+  display: inline-block;
+  animation: spinAndWiggle 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@media(max-width: 1000px) {
+    #groups_stops_modified {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #groups_stops_modified > div {
+        width: fit-content;
+        min-width: 60vw;
+    }
+}
